@@ -1,0 +1,5 @@
+pages/migrations
+pages/__pycache__
+quotes/migrations
+quotes/__pycache__
+vmmanager/__pycache__
