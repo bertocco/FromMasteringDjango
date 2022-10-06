@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+<meta charset="utf-8">
+<title>
+        {% block title %}
+	Untitled document
+	{% endblock title %}
+</title>
+<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+  <header id="header">
+    <div id="logo"><img src="{% static 'logo.png' %}" alt="" /></div>
+    <div id="topbanner"><img src="{% static 'top_banner.jpg' %}" width="800" height="200" alt="" /></div>
+  </header>   
+  <aside id="leftsidebar">
+    <nav id="nav">
+        {% block sidenav %}
+    <ul><li>Menu1</li><li>Menu2</li><li>Menu 3</li></ul>
+        {% endblock sidenav %}
+	<li><a href="/contact">Contact us</a></li>
+	<li><a href="/quote">Get a Quote</a></li>
+    </nav>
+  </aside>
+    <section id="main">
+      {% block content %}
+      <h1>Welcome!</h1>
+      <p>This is the site template</p>
+      {% endblock content %}
+    </section>
+    <footer id="footer">Copyright &copy; 2017 Meandco Web Design</footer>
+</div>
+<body>
+</html>
